@@ -1,0 +1,331 @@
+/*
+Theme Name: hestia-child
+Description: thème enfant basé sur le thème hestia
+Author: Emmanuelle DELAVALLEE
+Author URI: http://projet2.ede-projets-ocr.fr/
+Template: hestia
+Version: 1.0
+*/
+
+/*NAVBAR*/
+
+body.admin-bar .navbar { /*margin-top du menu de navigation*/
+    margin-top: 20px;
+}
+
+.navbar-default .navbar-nav > li > a  { /*couleur texte menu navigation*/
+    color: #00668E;
+}
+
+.navbar .navbar-nav > li > a { /*taille texte menu navigation*/
+    font-weight: 700;
+	color: #00668E;
+}
+
+
+/*PAGE D'ACCUEIL*/
+
+.header-filter::before { /*réduit le filtre actif sur l'image d'accueil*/
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.carousel .page-header .row { /*aligner le texte sur l'image d'accueil en haut*/
+    align-items: baseline;
+}
+
+/*PRESENTATION DU SITE*/
+
+.accueil_presentation{ 
+	display : flex;
+	flex-direction : row;
+	text-align: center;
+	margin-top: 70px;
+}
+
+.accueil_actu, .accueil_infos, .accueil_activites, .accueil_contact{
+	display : inline-flex;
+	width: 200px;
+	height: 250px;
+	margin: 40px 40px 80px 40px;
+	text-align: center;
+}
+
+.far.fa-snowflake, .fas.fa-info, .far.fa-calendar-check, .far.fa-paper-plane{
+	font-size:70px;
+	color: #289DAD;
+	padding: 0 40px;
+}
+
+.titre_presentation a, .txt_presentation a{
+	color: #3C4858;
+	text-decoration: none;
+}
+
+.titre_presentation a{
+	font-size: 0.75em;
+	font-weight: 500;
+}
+.txt_presentation a{
+	font-size: 1em;
+}
+
+/*ACTUALITE RECENTE*/
+
+.rpwwt-widget li a{ /*liens actu récente*/
+	font-size: 1.5em;
+	font-weight: 500;
+	color: #3C4858;
+	line-height: 1.2;
+	text-decoration: none;
+}
+
+/*FOOTER*/
+
+footer.footer.footer-black { /*menu pied de page*/
+	background: #185081;
+	padding: 20px 0 14px;
+}
+
+/*ANIMATION DES TITRES*/
+
+@-webkit-keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.hestia-title:hover {
+	-webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/*PAGE HEADER*/
+
+.page-header.header-small .container .hestia-title, .page-header.header-small .container .title { /*rectifie le margin du texte de l'entête*/
+    margin: 0 0 30px !important;
+}
+
+/*BLOG POST DISPOSITION PAGES ET ARTICLES*/
+
+.blog-post {
+    text-align: justify !important;
+}
+
+.blog-post h2, .blog-post h3, .single-post .blog-post .section-text h2, .single-post .blog-post .section-text h3{
+	padding: 25px 0 !important;
+}
+
+.single-post .blog-post .section-text p{
+	padding: 15px 0 !important;
+}
+
+/*PAGE ACTIVITES DU MOIS*/ 
+
+.column1 { /*largeur colomne date et heure*/
+    width: 13%;
+}
+
+.column2{ /*largeur colomne activité*/
+	width: 13%;
+	color: #185081;
+	font-weight: 500;
+}
+
+.column3{ /*largeur colomne description*/
+	width: 70%;
+}
+
+.column4{ /*largeur colomne description*/
+	width: 4%;
+}
+
+.css-events-list table.events-table td, .page:not(.woocommerce-page) .blog-post .section-text p, .css-events-list table.events-table th.event-description { /*padding des textes du tableau*/
+    padding: 4px 5px;
+}
+
+table > thead > tr > th { /*weight des titres des colonnes*/
+    font-weight: 600;
+}
+
+.single-post .blog-post .section-text h1, .single-post .blog-post .section-text h2, .single-post .blog-post .section-text h3, .single-post .blog-post .section-text h4, .single-post .blog-post .section-text h5, .single-post .blog-post .section-text h6, .single-post .blog-post .section-text p, .page:not(.woocommerce-page) .blog-post .section-text h1, .page:not(.woocommerce-page) .blog-post .section-text h2, .page:not(.woocommerce-page) .blog-post .section-text h3, .page:not(.woocommerce-page) .blog-post .section-text h4, .page:not(.woocommerce-page) .blog-post .section-text h5, .page:not(.woocommerce-page) .blog-post .section-text h6, .page:not(.woocommerce-page) .blog-post .section-text p { /*supprime le margin-bottom*/
+    margin: 0;
+}
+
+.events-table tbody tr:hover{ /*Couleur de ligne dans le tableau au hover*/
+background: rgba( 181, 227, 252, 0.4);
+color: #185081;
+}
+
+/*PAGE RESERVATION ACTIVITE*/
+.em-booking-form label { /*largeur du formulaire de réservation*/
+    width: 100%;
+}
+
+.em-booking-form-details { /*largeur partie réservation*/
+    width: 500px;
+}
+
+.em-booking-form-details input.input, .em-booking-form-details textarea, .input.input.form-control { /*longueur des champs à compléter*/
+    width: 75%;
+}
+
+div.em-booking-login { /*position champs à compléter utilisateur se connecter*/
+    margin: 0px 0px 0px 600px;
+}
+
+/*PAGE CONTACT*/
+
+#post-9 {
+	background-image: url(http://www.projet2.ede-projets-ocr.fr/wp-content/uploads/2019/11/two-man-hiking-on-snow-mountain-869258-scaled.jpg) !important;
+	padding: 0 !important;
+}
+
+#post-9 h2{
+	color: #FFF !important;
+	margin-bottom: 50px;
+}
+
+.caldera-grid { /*style du bloc formulaire*/
+    background: rgb(0, 0, 0, 0.4) !important;
+    padding: 10% 12%;
+}
+
+.caldera-grid .form-control { /*style des cases du formulaire*/
+    background: #FFF !important;
+    border: none !important;
+	border-radius: 15px!important;
+    transition: box-shadow .2s ease-in-out!important; /*transition à la selection d'un champs*/
+}
+
+.caldera-grid p, /*dimensions du texte au dessus des champs*/
+.caldera-grid label {
+    font-size: 18px !important;
+	font-weight: 500 !important;
+	color: #FFF !important;
+	padding: 0 0 10px 10px;
+}
+
+.help-block /*dimensions du texte au dessus des champs*/ {
+    font-size: 14px !important;
+	font-weight: 500 !important;
+	color: #FFF !important;
+	padding-bottom: 10px;
+}
+
+.caldera-grid textarea.form-control { /*change la taille de la text-area du message*/
+    height: 400px !important;
+}
+
+.entete-form{ /*entête du formulaire*/
+	text-align:center;
+	padding: 70px 0;
+}
+
+div.em-booking-login label {
+	width: 150px;
+}
+
+/*MEDIA QUERIES*/
+
+@media (min-width: 992px){ 
+	
+/* ACTU RECENTE*/
+	
+.col-md-6 { /*taille widget actu récente*/
+    width: 50% !important;
+}
+	
+.col-md-offset-3 { /*centrer widget actu récente*/
+    margin-left: 25%;
+}
+	
+/*PAGE ACTIVITES DU MOIS*/
+
+.col-md-offset-2 { /*réglage de la largeur occupée*/
+    margin-left: 5%;
+}
+
+.col-md-offset-1 { /*rectifie le margin-left pour centrer le texte des entêtes de pages*/
+    margin-left: 5%;
+}
+	
+.col-md-8 {
+    width: 95%;
+}
+
+/*PAGE CONTACTS*/	
+	
+.col-md-offset-2 { /*Supprime le margin-left du formulaire*/
+    margin-left: 0;
+}
+.col-md-8 { /*le formulaire occupe toute la largeur du post*/
+    width: 100%;
+}
+}
+
+@media (max-width: 992px){
+	
+/*ACTU RECENTE*/
+.col-md-6{/*placement actu récente*/
+	padding-left: 15%;
+    padding-right: 15%;	
+}
+	
+/*MENU FOOTER*/ /*Réduit le padding des liens du footer*/
+	
+.footer-big .footer-menu li a {
+	padding: 8px !important;
+}
+	
+/*PAGE ACTIVITES DU MOIS*/
+	
+.event-time, .event-description{
+	display : none;
+	color: #FFFFFF;
+}
+	
+.events-content{
+	display: flex;
+	flex-direction: column;
+	margin:20px;
+}
+
+.column1, .column2, .column3, .column4{
+	width: 100%;
+	text-align: center;
+	font-size: 1.3em;
+}
+
+.column4{
+	margin-bottom:20px;
+}
+	
+/* INSCRIPTION ACTIVITES DU MOIS*/	
+	
+.em-booking { /*redisposition des réservations*/
+    display: flex;
+	flex-direction: column;
+}
+	
+div.em-booking-login { /*côté utilisateur se connecter*/
+	padding: 10px 10px 10px 10px;
+    margin: 0px;
+    border-left: none;
+}	
+	
+.em-booking-form-details { /*largeur formulaire*/
+    width: 100%;
+}
+
+.em-booking-form-details input.input, .em-booking-form-details textarea, .input.input.form-control { /*longueur des champs à compléter*/
+    width: 100%;
+}
+}
